@@ -1,7 +1,7 @@
-@import"../bootstrapScss/bootstrap";
+@import"../bootstrapScss/functions";
+@import"helpers/variables";
+@import"../bootstrapScss/mixins";
 
-@import"../bootstrapScss/_functions.scss";
-@import"helpers/_variables";
-@import"../bootstrapScss/_mixins.scss";
+@import"../bootstrapScss/bootstrap";
 
 @import"./_index";
