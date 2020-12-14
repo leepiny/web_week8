@@ -8,7 +8,6 @@
         @content;
     }    
 }
-
 *,*::before,*::after{
     // outline: 1px solid green;
 }
@@ -23,8 +22,17 @@ a{
     display:block;
     cursor: pointer;
 }
+.mb-xl{
+    margin-bottom: 72px;
+    @include pad{
+        margin-bottom: 48px;
+    }
+}
 .carousel{
     margin-bottom: 120px;
+    @include pad{
+        margin-bottom: 350px;
+    }
     .carousel-item{
         max-height: 320px;
         img{
@@ -32,19 +40,36 @@ a{
         }
     }
     .slogan{
-        bottom: 40%;
-        left: 50%;
-        transform: translateX(-50%);
+        height: 55%;
     }
     .user-select-bar{
         width: 70%;
         bottom: -20%;
         left: 50%;
         transform: translateX(-50%);
-        select{
-            width: 232px;
-            height: 56px;
+        @include pad{
+            bottom: -95%;
+        }  
+        .dropdown{
+            width: 26%;
+            @include pad{
+                width: 80%;
+            }
+            .dropdown-menu{
+                width: 100%;
+            }
+            button{
+                width: 100%;
+            }
+            button:hover{
+                color: #6C51E2;
+            }
         }
+        .search-btn{
+            @include pad{
+                width: 80%;
+            }
+        } 
     }
 }
 .city-link{
@@ -60,9 +85,12 @@ a{
 .swiper-container {
     min-width: 100%;
     height: 260px;
-    overflow: hidden;
+    .swiper-button-next{
+        padding: 35px;
+        background: #6C51E2;
+        border-radius: 50%;
+    }
 }
-
 .top-choices-list{
     li{
         cursor:pointer
@@ -125,4 +153,7 @@ footer{
             width: 90%;
         }
     }
+}
+.nav-link:hover{
+    color: #6C51E2;
 }

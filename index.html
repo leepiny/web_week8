@@ -8,6 +8,12 @@
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <!-- swiper -->
+  <script src="../HexSchool/jquery-3.5.1.min.js"></script>
+
+  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <!-- http://www.w3big.com/try/try.php?filename=jqueryui-example-datepicker-dropdown-month-year -->
+  <!-- jQuery -->
   <link rel="stylesheet" href="dist/css/all.min.css">
   <title>week8</title>
 </head>
@@ -20,13 +26,18 @@
           alt="logo">
       </a>
       <ul class="d-flex list-unstyled m-0">
-        <li class="mr-1">
-          <a href="#" class="nav-link dropdown-toggle text-dark">
+        <li class="dropdown mr-1">
+          <button class="btn nav-link dropdown-toggle" data-toggle="dropdown" id="language-drop">
             <i class="fas fa-globe-americas"></i>
-          </a>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="language-drop">
+            <a class="dropdown-item" href="#">中文</a>
+            <a class="dropdown-item" href="#">英文</a>
+            <a class="dropdown-item" href="#">日文</a>
+          </div>
         </li>
-        <li class="mr-1"><a class="nav-link text-dark">Sign up</a></li>
-        <li class="mr-1"><a class="nav-link text-dark">Login</a></li>
+        <li class="mr-1"><button class="btn nav-link">Sign up</button></li>
+        <li class="mr-1"><button class="btn nav-link">Login</button></li>
       </ul>
     </div>
   </nav>
@@ -55,41 +66,71 @@
       <span class="sr-only">Next</span>
     </a>
 
-    <h1 class="slogan position-absolute text-white">
-      Discover your ideal hotel
-    </h1>
+    <div class="slogan carousel-caption d-block text-white">
+      <h1>Discover your ideal hotel</h1>
+    </div>
 
-    <form
-      class="user-select-bar bg-secondary py-5 px-2 rounded position-absolute d-flex flex-lg-row flex-column justify-content-around align-items-center">
-      <select class="Destination-select border-0 mb-3 mb-lg-0">
-        <option selected>Destination</option>
-        <option value="1">Bangkok</option>
-        <option value="2">Osaka</option>
-        <option value="3">Roma</option>
-        <option value="4">Paris</option>
-        <option value="5">Reykjavik</option>
-      </select>
 
-      <select class="guests-select border-0 mb-3 mb-lg-0">
-        <option selected>Guests</option>
-        <option value="1">Bangkok</option>
-        <option value="2">Osaka</option>
-        <option value="3">Roma</option>
-        <option value="4">Paris</option>
-        <option value="5">Reykjavik</option>
-      </select>
 
-      <select class="guests-select border-0 mb-3 mb-lg-0">
-        <option selected>Guests</option>
-        <option value="1">Bangkok</option>
-        <option value="2">Osaka</option>
-        <option value="3">Roma</option>
-        <option value="4">Paris</option>
-        <option value="5">Reykjavik</option>
-      </select>
+    <ul
+      class="user-select-bar list-unstyled bg-secondary py-5 px-2 rounded position-absolute d-flex flex-lg-row flex-column justify-content-around align-items-center">
 
-      <div class="btn btn-primary p-3">SEARCH</div>
-    </form>
+      <li class="dropdown">
+        <button type="button" class="btn btn-light mb-lg-0 mb-3 p-3 btn-block" id="drop-destination"
+          data-toggle="dropdown">
+          <i class="fas fa-map-marker-alt mr-3"></i>
+          Destination
+        </button>
+        <div class="dropdown-menu" aria-labelledby="drop-destination">
+          <a class="dropdown-item" href="#">Bangkok</a>
+          <a class="dropdown-item" href="#">Osaka</a>
+          <a class="dropdown-item" href="#">Roma</a>
+          <a class="dropdown-item" href="#">Paris</a>
+          <a class="dropdown-item" href="#">Reykjavik</a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <button class="btn btn-light mb-lg-0 mb-3 p-3 btn-block" id="datepicker">
+          <i class="far fa-calendar-alt mr-3"></i>
+          Check-in / out</button>
+      </li>
+
+      <li class="dropdown">
+        <button type="button" class="btn btn-light mb-lg-0 mb-3 p-3 btn-block" id="drop-guests" data-toggle="dropdown">
+          <i class="fas fa-user mr-3"></i>
+          Guests
+        </button>
+        <div class="dropdown-menu" aria-labelledby="drop-guests">
+          <a class="dropdown-item d-flex" href="#">
+            Adult
+            <div class="d-flex align-items-center justify-content-center ml-auto">
+              <i class="fas fa-chevron-up mr-3"></i>
+              <p class="m-0 mr-3">2</p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </a>
+          <a class="dropdown-item d-flex" href="#">
+            Child
+            <div class="d-flex align-items-center justify-content-center ml-auto">
+              <i class="fas fa-chevron-up mr-3"></i>
+              <p class="m-0 mr-3">0</p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </a>
+          <a class="dropdown-item d-flex" href="#">
+            Room
+            <div class="d-flex align-items-center justify-content-center ml-auto">
+              <i class="fas fa-chevron-up mr-3"></i>
+              <p class="m-0 mr-3">1</p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </a>
+        </div>
+      </li>
+
+      <button class="search-btn btn btn-primary p-3 btn-block">SEARCH</button>
+    </ul>
   </div>
   <!-- header -->
   <div class="container">
@@ -109,12 +150,12 @@
       </li>
     </ul>
 
-    <div class="swiper-container">
+    <div class="swiper-container mb-xl">
       <ul class="swiper-wrapper top-choices-list list-unstyled">
         <li class="swiper-slide">
           <div class="card border-0">
             <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/top1.jpg"
-            class="card-img-top mb-1" alt="hotel-photo">
+              class="card-img-top mb-1" alt="hotel-photo">
             <div class="card-body">
               <h5 class="mb-1">Hotel Aqua</h5>
               <ul class="list-unstyled d-flex mb-1">
@@ -186,148 +227,152 @@
           </div>
         </li>
       </ul>
-      <div class="swiper-button-next text-primary"></div>
+      <div class="swiper-button-next text-white"></div>
     </div>
     <!-- Top Choices -->
 
-    <h2 class="mb-4">Popular Destinations</h2>
-    <ul class="row list-unstyled popular-destinations-list mb-5">
-      <li class="col-lg-4 col-sm-6 col-12 mb-4">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Osaka.jpg"
-            class="card-img" alt="attractions-photo">
-          <div class="photo-mask rounded"></div>
-          <div class="card-img-overlay d-flex align-items-center text-white">
-            <div>
-              <p class="card-text mb-0"><small>JAPAN</small></p>
-              <h3 class="card-title mb-0">Osaka</h3>
+    <div class="mb-xl">
+      <h2 class="mb-4">Popular Destinations</h2>
+      <ul class="row list-unstyled popular-destinations-list">
+        <li class="col-lg-4 col-sm-6 col-12 mb-4">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Osaka.jpg"
+              class="card-img" alt="attractions-photo">
+            <div class="photo-mask rounded"></div>
+            <div class="card-img-overlay d-flex align-items-center text-white">
+              <div>
+                <p class="card-text mb-0"><small>JAPAN</small></p>
+                <h3 class="card-title mb-0">Osaka</h3>
+              </div>
+              <i class="fas fa-chevron-down ml-auto"></i>
             </div>
-            <i class="fas fa-chevron-down ml-auto"></i>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li class="col-lg-4 col-sm-6 col-12 mb-4">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Kyoto.jpg"
-            class="card-img" alt="attractions-photo">
-          <div class="photo-mask rounded"></div>
-          <div class="card-img-overlay d-flex align-items-center text-white">
-            <div>
-              <p class="card-text mb-0"><small>JAPAN</small></p>
-              <h3 class="card-title mb-0">Kyoto</h3>
+        <li class="col-lg-4 col-sm-6 col-12 mb-4">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Kyoto.jpg"
+              class="card-img" alt="attractions-photo">
+            <div class="photo-mask rounded"></div>
+            <div class="card-img-overlay d-flex align-items-center text-white">
+              <div>
+                <p class="card-text mb-0"><small>JAPAN</small></p>
+                <h3 class="card-title mb-0">Kyoto</h3>
+              </div>
+              <i class="fas fa-chevron-down ml-auto"></i>
             </div>
-            <i class="fas fa-chevron-down ml-auto"></i>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li class="col-lg-4 col-sm-6 col-12 mb-4">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Reykjavic.jpg"
-            class="card-img" alt="attractions-photo">
-          <div class="photo-mask rounded"></div>
-          <div class="card-img-overlay d-flex align-items-center text-white">
-            <div>
-              <p class="card-text mb-0"><small>iceland</small></p>
-              <h3 class="card-title mb-0">Reykjavík</h3>
+        <li class="col-lg-4 col-sm-6 col-12 mb-4">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Reykjavic.jpg"
+              class="card-img" alt="attractions-photo">
+            <div class="photo-mask rounded"></div>
+            <div class="card-img-overlay d-flex align-items-center text-white">
+              <div>
+                <p class="card-text mb-0"><small>iceland</small></p>
+                <h3 class="card-title mb-0">Reykjavík</h3>
+              </div>
+              <i class="fas fa-chevron-down ml-auto"></i>
             </div>
-            <i class="fas fa-chevron-down ml-auto"></i>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li class="col-lg-4 col-sm-6 col-12 mb-4">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Paris.jpg"
-            class="card-img" alt="attractions-photo">
-          <div class="photo-mask rounded"></div>
-          <div class="card-img-overlay d-flex align-items-center text-white">
-            <div>
-              <p class="card-text mb-0"><small>France</small></p>
-              <h3 class="card-title mb-0">Paris</h3>
+        <li class="col-lg-4 col-sm-6 col-12 mb-4">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Paris.jpg"
+              class="card-img" alt="attractions-photo">
+            <div class="photo-mask rounded"></div>
+            <div class="card-img-overlay d-flex align-items-center text-white">
+              <div>
+                <p class="card-text mb-0"><small>France</small></p>
+                <h3 class="card-title mb-0">Paris</h3>
+              </div>
+              <i class="fas fa-chevron-down ml-auto"></i>
             </div>
-            <i class="fas fa-chevron-down ml-auto"></i>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li class="col-lg-4 col-sm-6 col-12 mb-4">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Roman.jpg"
-            class="card-img" alt="attractions-photo">
-          <div class="photo-mask rounded"></div>
-          <div class="card-img-overlay d-flex align-items-center text-white">
-            <div>
-              <p class="card-text mb-0"><small>Italy</small></p>
-              <h3 class="card-title mb-0">Roma</h3>
+        <li class="col-lg-4 col-sm-6 col-12 mb-4">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Roman.jpg"
+              class="card-img" alt="attractions-photo">
+            <div class="photo-mask rounded"></div>
+            <div class="card-img-overlay d-flex align-items-center text-white">
+              <div>
+                <p class="card-text mb-0"><small>Italy</small></p>
+                <h3 class="card-title mb-0">Roma</h3>
+              </div>
+              <i class="fas fa-chevron-down ml-auto"></i>
             </div>
-            <i class="fas fa-chevron-down ml-auto"></i>
           </div>
-        </div>
-      </li>
+        </li>
 
-      <li class="col-lg-4 col-sm-6 col-12 mb-4">
-        <div class="card">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Bangkok.jpg"
-            class="card-img" alt="attractions-photo">
-          <div class="photo-mask rounded"></div>
-          <div class="card-img-overlay d-flex align-items-center text-white">
-            <div>
-              <p class="card-text mb-0"><small>Thailand</small></p>
-              <h3 class="card-title mb-0">Bangkok</h3>
+        <li class="col-lg-4 col-sm-6 col-12 mb-4">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Bangkok.jpg"
+              class="card-img" alt="attractions-photo">
+            <div class="photo-mask rounded"></div>
+            <div class="card-img-overlay d-flex align-items-center text-white">
+              <div>
+                <p class="card-text mb-0"><small>Thailand</small></p>
+                <h3 class="card-title mb-0">Bangkok</h3>
+              </div>
+              <i class="fas fa-chevron-down ml-auto"></i>
             </div>
-            <i class="fas fa-chevron-down ml-auto"></i>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </div>
     <!-- Popular Destinations -->
 
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="m-0">Get Inspiration</h2>
-      <button class="btn btn-outline-primary">see more</button>
+    <div class="mb-xl">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="m-0">Get Inspiration</h2>
+        <button class="btn btn-outline-primary">see more</button>
+      </div>
+      <ul class="row list-unstyled get-inspiration-list mb-5">
+        <li class="col-lg-4 col-12">
+          <div class="card border-0">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/italy.jpg"
+              class="card-img-top rounded mb-4" alt="hotel-photo">
+            <div class="card-body">
+              <h3 class="mb-1">The fifth most visited country</h3>
+              <p class="text-black-50">
+                Italy is the fifth most visited country in the world, with a total of 52.3 million…
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="col-lg-4 col-12">
+          <div class="card border-0">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Thailand.jpg"
+              class="card-img-top rounded mb-4" alt="hotel-photo">
+            <div class="card-body">
+              <h3 class="mb-1">Visit Thailand for Bangkok</h3>
+              <p class="text-black-50">
+                Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li class="col-lg-4 col-12">
+          <div class="card border-0">
+            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/NewZealand.jpg"
+              class="card-img-top rounded mb-4" alt="hotel-photo">
+            <div class="card-body">
+              <h3 class="mb-1">Lord of the Rings Tour</h3>
+              <p class="text-black-50">
+                The national cuisine has been described as Pacific Rim, incorporating the native Māori…
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul class="row list-unstyled get-inspiration-list mb-5">
-      <li class="col-4">
-        <div class="card border-0">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/italy.jpg"
-            class="card-img-top rounded mb-4" alt="hotel-photo">
-          <div class="card-body">
-            <h3 class="mb-1">The fifth most visited country</h3>
-            <p class="text-black-50">
-              Italy is the fifth most visited country in the world, with a total of 52.3 million…
-            </p>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-4">
-        <div class="card border-0">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Thailand.jpg"
-            class="card-img-top rounded mb-4" alt="hotel-photo">
-          <div class="card-body">
-            <h3 class="mb-1">Visit Thailand for Bangkok</h3>
-            <p class="text-black-50">
-              Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…
-            </p>
-          </div>
-        </div>
-      </li>
-
-      <li class="col-4">
-        <div class="card border-0">
-          <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/NewZealand.jpg"
-            class="card-img-top rounded mb-4" alt="hotel-photo">
-          <div class="card-body">
-            <h3 class="mb-1">Lord of the Rings Tour</h3>
-            <p class="text-black-50">
-              The national cuisine has been described as Pacific Rim, incorporating the native Māori…
-            </p>
-          </div>
-        </div>
-      </li>
-    </ul>
   </div>
   <!-- Get Inspiration -->
 
@@ -349,8 +394,8 @@
     </form>
   </footer>
 
-  <div class="container d-flex flex-sm-row flex-column-reverse align-items-center p-3">
-    <small class="text-black-50 mr-lg-5 mr-sm-auto">
+  <div class="container d-flex flex-md-row flex-column-reverse align-items-center p-3">
+    <small class="text-black-50 mr-lg-5 mr-md-auto">
       © 2020 ALOHA, Inc. All rights reserved.</small>
 
     <ul class="list-unstyled d-flex m-0 mb-sm-0 mb-2">
@@ -361,30 +406,38 @@
 
     <ul class="list-unstyled d-lg-flex m-0 ml-auto d-none">
       <li>
-        <a href="#" class="nav-link dropdown-toggle">
+        <button class="nav-link btn dropdown-toggle" data-toggle="dropdown" id="footer-language-drop">
           <i class="fas fa-globe-americas"></i>
-          <small class="text-black-50">English</small>
-        </a>
+          <small class="text-black-50">Chinese</small>
+        </button>
+        <div class="dropdown-menu text-center" aria-labelledby="footer-language-drop">
+          <a class="dropdown-item" href="#">中文</a>
+          <a class="dropdown-item" href="#">英文</a>
+          <a class="dropdown-item" href="#">日文</a>
+        </div>
       </li>
       <li>
-        <a href="#" class="nav-link dropdown-toggle">
-        <i class="fas fa-hand-holding-usd"></i>
-        <small class="text-black-50">TWD</small>
-      </a>
-    </li>
+        <button class="nav-link btn dropdown-toggle" data-toggle="dropdown" id="footer-money-drop">
+          <i class="fas fa-hand-holding-usd"></i>
+          <small class="text-black-50">TWD</small>
+        </button>
+        <div class="dropdown-menu text-center" aria-labelledby="footer-money-drop">
+          <a class="dropdown-item" href="#">TWD</a>
+          <a class="dropdown-item" href="#">USD</a>
+          <a class="dropdown-item" href="#">JPY</a>
+        </div>
+      </li>
     </ul>
   </div>
 
 
 
-   <!-- Swiper JS -->
-   <script src="https://unpkg.com/swiper@6.4.1/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@6.4.1/swiper-bundle.min.js"></script>
 
-   <!-- Initialize Swiper -->
-   <script>
-     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 4,
-      spaceBetween: 30,
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -394,10 +447,42 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-});
-   </script>
+      breakpoints: {
+        1300: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        },
+        // when window width is <= 499px
+        900: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        // when window width is <= 999px
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        }
+      }
+    });
+  </script>
 
-   
+
+  <script>
+    jQuery(document).ready(function () {
+      $(function () {
+        $("#datepicker").datepicker({
+          changeMonth: true,
+          changeYear: true
+        });
+      });
+    })
+
+
+
+  </script>
+  <!-- jQuery日期 -->
+
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
