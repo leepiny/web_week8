@@ -27,7 +27,57 @@ a{
     @include pad{
         margin-bottom: 48px;
     }
+} 
+.btn-range{
+    width: 85px;
+    height: 18px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    .btn-line{
+        width: 18px;
+        height: 2px;
+        background: black;
+        border-radius: 30px;
+        transition: all .5s ease-in-out;
+    }
+    .btn-line::before{
+        content:"";
+        position: absolute;
+        transform: translateY(-5px);
+        width: 18px;
+        height: 2px;
+        background: black;
+        border-radius: 30px;
+        transition: all .7s ease-in-out;
+    }
+    .btn-line::after{
+        content:"";
+        position: absolute;
+        transform: translateY(5px);
+        width: 18px;
+        height: 2px;
+        background: black;
+        border-radius: 30px;
+        transition: all .7s ease-in-out;
+    }
 }
+//漢堡選單
+
+.btn-range.open{
+    .btn-line{
+        transform: rotate(90deg);
+        background: transparent;
+        box-shadow:none;
+    }
+    .btn-line::before{
+        transform: rotate(45deg) translate(0 ,0);
+    }
+    .btn-line::after{
+        transform: rotate(-45deg) translate(0 ,0);
+    }
+    
+}
+//漢堡選單 Animation
 .carousel{
     margin-bottom: 120px;
     @include pad{
@@ -36,7 +86,7 @@ a{
     .carousel-item{
         max-height: 320px;
         img{
-            object-fit: cover;
+            width: 100%;
         }
     }
     .slogan{
@@ -143,6 +193,9 @@ footer{
     .footer-title{
         font-size:48px;
         font-weight: bold;
+        @include pad{
+            font-size: 38px;
+        }
         @include mobile{
             font-size:24px;
         }
