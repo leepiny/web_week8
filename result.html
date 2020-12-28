@@ -26,7 +26,7 @@
           d-flex justify-content-center align-items-center d-sm-none d-block">
                     <div class="btn-line"></div>
                 </div>
-    
+
                 <a href="index.html">
                     <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/logo-aloha.svg"
                         alt="logo">
@@ -48,22 +48,22 @@
                 </ul>
             </div>
         </nav>
-    
+
         <header class="bg-secondary mb-4">
             <div class="container">
-                <ul
-                    class="list-unstyled py-3 m-0 rounded d-flex justify-content-between align-items-center">
-    
+                <ul class="list-unstyled py-3 m-0 rounded d-flex justify-content-between align-items-center">
                     <li class="dropdown">
-                        <button type="button" class="btn btn-light mb-lg-0 mb-3 p-2 px-4 d-flex align-items-center"
+                        <button type="button" class="btn btn-light mb-lg-0 mb-sm-3 mb-0 p-2 px-lg-4 px-sm-1 d-flex align-items-center"
                             id="drop-destination" data-toggle="dropdown">
-                            <i class="fas fa-map-marker-alt mr-4"></i>
-                            <div class="dropdown-text text-left">
-                                <p class="m-0">Destination</p>
-                                <small class="text-black-50">Bangkok, Thailand</small>
+                            <i class="fas fa-map-marker-alt mr-4 d-sm-block d-none"></i>
+                            <div class="dropdown-text font-s text-left">
+                                <p class="m-0 d-sm-block d-none">Destination</p>
+                                <small class="text-black-50 d-flex">Bangkok
+                                    <span class="d-sm-block d-none">
+                                        , Thailand</span></small>
                             </div>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="drop-destination">
+                        <div class="dropdown-menu font-s" aria-labelledby="drop-destination">
                             <a class="dropdown-item" href="#">Bangkok</a>
                             <a class="dropdown-item" href="#">Osaka</a>
                             <a class="dropdown-item" href="#">Roma</a>
@@ -71,31 +71,34 @@
                             <a class="dropdown-item" href="#">Reykjavik</a>
                         </div>
                     </li>
-    
+
                     <li class="dropdown">
-                        <button class="btn btn-light mb-lg-0 mb-3 p-2 px-4 d-flex align-items-center" id="datepicker">
-                            <i class="far fa-calendar-alt mr-4"></i>
-                            <div class="dropdown-text text-left pr-3 mr-1 border-right">
-                                <p class="m-0">Check-in</p>
-                                <small class="text-black-50">17 June</small>
+                        <button class="btn btn-light mb-lg-0 mb-sm-3 mb-0 p-2 px-lg-4 d-flex align-items-center" id="datepicker">
+                            <i class="far fa-calendar-alt mr-4 d-sm-block d-none"></i>
+                            <div class="dropdown-text font-s">
+                                <p class="m-0 d-sm-flex d-none pr-3">Check-in
+                                    <span class="d-lg-none d-sm-block pl-1">
+                                        / out</span></p>
+                                <small class="text-black-50 d-flex">17 June
+                                    <span class="d-lg-none d-sm-block pl-1"> - 19 June</span></small>
                             </div>
-                            <div class="dropdown-text text-left px-3 mx-1">
+                            <div class="dropdown-text text-left pl-3 mx-1 border-left d-lg-block d-none font-s">
                                 <p class="m-0">Check-out</p>
                                 <small class="text-black-50">19 June</small>
                             </div>
                         </button>
                     </li>
-    
+
                     <li class="dropdown">
-                        <button type="button" class="btn btn-light mb-lg-0 mb-3 p-2 px-4 d-flex align-items-center"
+                        <button type="button" class="btn btn-light mb-lg-0 mb-sm-3 mb-0 p-2 px-lg-4 px-sm-1 d-flex align-items-center"
                             id="drop-guests" data-toggle="dropdown">
-                            <i class="fas fa-user mr-4"></i>
-                            <div class="dropdown-text text-left">
-                                <p class="m-0">Guests</p>
-                                <small class="text-black-50">2 adults・1 room</small>
+                            <i class="fas fa-user mr-4 d-sm-block d-none"></i>
+                            <div class="dropdown-text font-s">
+                                <p class="m-0 d-sm-block d-none text-left">Guests</p>
+                                <small class="text-black-50 d-flex">2 adults・1 room</small>
                             </div>
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="drop-guests">
+                        <div class="dropdown-menu font-s" aria-labelledby="drop-guests">
                             <a class="dropdown-item d-flex" href="#">
                                 Adult
                                 <div class="d-flex align-items-center justify-content-center ml-auto">
@@ -122,495 +125,660 @@
                             </a>
                         </div>
                     </li>
-                    <a href="result.html" class="search-btn btn btn-primary p-3 px-4">SEARCH</a>
+                    <a href="result.html" class="search-btn btn btn-primary p-3 px-4 d-sm-block d-none">SEARCH</a>
                 </ul>
             </div>
         </header>
         <!-- 表頭與選單 -->
     </div>
-    
+
     <div class="container">
         <div class="row">
-            <div class="col-4">
-                <h2 class="mb-4">Bangkok<sup class="text-primary small">3,240</sup></h2>
+            <div class="col-4 mb-3 d-sm-block d-none">
+                <h2>Bangkok<sup class="text-primary small">3,240</sup></h2>
             </div>
-            <div class="col-8">
-                <ul class="list-unstyled d-flex mb-5">
+            <div class="col-8 mb-3 d-sm-block d-none">
+                <ul class="list-unstyled d-flex">
                     <li><a href="#" class="mr-4">Recommended</a></li>
                     <li><a href="#" class="mr-4">Lowest Price</a></li>
                     <li><a href="#" class="mr-4">Best value</a></li>
                     <li><a href="#" class="mr-4">Distance to City Center</a></li>
                 </ul>
+            </div>
 
-                <div class="card border-0 shadow mb-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Rachada1.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
+            <div class="col-sm-4 d-sm-block d-none">
+                <div class="bg-secondary px-4 py-2 rounded">
+                    <h3 class="mb-3">Deals</h3>
+                    <form class="mb-3">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="free-cancellation">
+                            <label class="form-check-label" for="free-cancellation">
+                                Free cancellation
+                            </label>
                         </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Rachada, Bangkok
-                                        <span class="text-black-50">・2 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">4.0 (283)</small>
-                                    </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">Rachada Hotel</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Deluxe Double Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・1 bed (Queen size)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
-                                            cancellation</span>
-                                    </li>
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <p class="h3 m-0">TWD 1,980</p>
-                                </div>
-                                <!-- badge樣式沒有作用??另外寫css的 -->
-                            </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="no-prepayment">
+                            <label class="form-check-label" for="no-prepayment">
+                                No prepayment
+                            </label>
                         </div>
-                    </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="special-offers">
+                            <label class="form-check-label" for="special-offers">
+                                Special offers
+                            </label>
+                        </div>
+                    </form>
+                    <div class="dropdown-divider mb-3 border-white"></div>
+
+
+                    <h3 class="mb-3">Popular filter</h3>
+                    <form class="mb-3">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="breakfast-included">
+                            <label class="form-check-label" for="breakfast-included">
+                                Breakfast included
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="free-wi-fi">
+                            <label class="form-check-label" for="free-wi-fi">
+                                Free Wi-Fi
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="swimming-pool">
+                            <label class="form-check-label" for="swimming-pool">
+                                Swimming pool
+                            </label>
+                        </div>
+                    </form>
+                    <div class="dropdown-divider mb-3 border-white"></div>
+
+                    <h3 class="mb-3">Budget</h3>
+                    <form class="mb-3">
+                        <div class="form-group">
+                            <input type="range" class="form-control-range" id="formControlRange" style="width: 100%">
+                        </div>
+                        <ul class="list-unstyled d-flex justify-content-between align-items-center">
+                            <li>
+                                <p class="m-0 bg-white p-2 px-3 rounded">
+                                    Min price<br><small class="text-black-50">TWD 800</small></p>
+                            </li>
+                            <li>
+                                <p class="m-0 bg-white p-2 px-3 rounded">
+                                    Max price<br><small class="text-black-50">TWD 4,000+</small></p>
+                            </li>
+                        </ul>
+                    </form>
+                    <div class="dropdown-divider mb-3 border-white"></div>
+
+                    <h3 class="mb-3">rating</h3>
+                    <form class="mb-3">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" name="rating" value="option1" type="radio" id="five-star">
+                            <label class="form-check-label" for="five-star">
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="text-black-50">5.0</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" name="rating" value="option2" type="radio" id="four-star">
+                            <label class="form-check-label" for="four-star">
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="text-black-50">4.0</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" name="rating" value="option3" type="radio" id="three-star">
+                            <label class="form-check-label" for="three-star">
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="text-black-50">3.0</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" name="rating" value="option4" type="radio" id="two-star">
+                            <label class="form-check-label" for="two-star">
+                                <i class="fas fa-star mr-1"></i>
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="text-black-50">2.0</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" name="rating" value="option5" type="radio" id="one-star">
+                            <label class="form-check-label" for="one-star">
+                                <i class="fas fa-star mr-1"></i>
+                                <span class="text-black-50">1.0</span>
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" name="rating" value="option6" type="radio" id="unrated">
+                            <label class="form-check-label" for="unrated">
+                                <span class="text-black-50">Unrated</span>
+                            </label>
+                        </div>
+                    </form>
+                    <div class="dropdown-divider mb-3 border-white"></div>
+
+                    <h3 class="mb-3">Stay type</h3>
+                    <form class="mb-3">
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="hotel">
+                            <label class="form-check-label" for="hotel">
+                                Hotel
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="apartment">
+                            <label class="form-check-label" for="apartment">
+                                Apartment
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="unique">
+                            <label class="form-check-label" for="unique">
+                                Unique
+                            </label>
+                        </div>
+                        <div class="form-check mb-2">
+                            <input class="form-check-input rounded-0 border-dark" type="checkbox" id="hostel">
+                            <label class="form-check-label" for="hostel">
+                                Hostel
+                            </label>
+                        </div>
+                    </form>
                 </div>
-                <div class="dropdown-divider"></div>
+            </div>
 
-                <div class="card border-0 shadow my-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Phaya.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Phaya Thai, Bangkok
-                                        <span class="text-black-50">・2.9 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">5.0 (121)</small>
-                                    </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">Forever Place</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Standard Double Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・1 bed (Queen size)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
-                                            cancellation</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <del class="text-black-50">TWD 1,980</del>
-                                    <p class="h3 m-0">TWD <span class="text-primary">1,680</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Room card -->
+            <div class="col-sm-8 col-12">
+                <h2 class="d-sm-none d-block text-center mb-4">Bangkok<sup class="text-primary small">3,240</sup></h2>
+                <div class="btn-group btn-group-lg d-flex justify-content-around mb-3 d-sm-none d-block">
+                    <button type="button" class="btn border-right">
+                        <i class="fas fa-align-left mr-4"></i>Filter</button>
+                    <button type="button" class="btn">
+                        <i class="fas fa-align-left mr-4"></i>sort</button>
                 </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="card border-0 shadow my-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Bangkapi.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Bangkapi, Bangkok
-                                        <span class="text-black-50">・14 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">4.0 (325)</small>
-                                    </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">LUV Hotel</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Standard Double Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・1 bed (Queen size)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
-                                            cancellation</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <p class="h3 m-0">TWD 2,460</p>
-                                </div>
+                <div class="mobile-bg-secondary">
+                    <div class="card border-0 mb-sm-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Rachada1.jpg"
+                                    class="card-img" alt="card-photo">
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="card border-0 shadow my-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Chatuchack1.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Chatuchack, Bangkok
-                                        <span class="text-black-50">・12 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">4.0 (204)</small>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Rachada, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・2 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">4.0 (283)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">Rachada Hotel</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Deluxe Double Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・1 bed (Queen size)</p>
+                                        </li>
                                     </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">WOW Life Hotel</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Standard Double Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・1 bed (Queen size)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <del class="text-black-50">TWD 2,880</del>
-                                    <p class="h3 m-0">TWD <span class="text-primary">2,240</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="card border-0 shadow my-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/roomA.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Chatuchack, Bangkok
-                                        <span class="text-black-50">・8 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">5.0 (189)</small>
+                                    <ul class="list-unstyled d-lg-flex align-items-center m-0 d-lg-block d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
+                                                cancellation</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
+                                        </li>
                                     </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">Celebrity Palace</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Standard Double Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・1 bed (Queen size)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <del class="text-black-50">TWD 2,120</del>
-                                    <p class="h3 m-0">TWD <span class="text-primary">1,890</span></p>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <p class="h3 m-0">TWD 1,980</p>
+                                    </div>
+                                    <!-- badge樣式沒有作用??另外寫css的 -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="card border-0 shadow my-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Watana1.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Watana, Bangkok
-                                        <span class="text-black-50">・6 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">5.0 (102)</small>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Phaya.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Phaya Thai, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・2.9 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">5.0 (121)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">Forever Place</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Standard Double Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・1 bed (Queen size)</p>
+                                        </li>
                                     </ul>
+                                    <ul class="list-unstyled d-lg-flex align-items-center m-0 d-lg-block d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
+                                                cancellation</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <del class="text-black-50">TWD 1,980</del>
+                                        <p class="h3 m-0">TWD <span class="text-primary">1,680</span></p>
+                                    </div>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">Bangkok Hostel</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Twin Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・2 beds (2 twins)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
-                                            cancellation</span>
-                                    </li>
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <p class="h3 m-0">TWD 880</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Bangkapi.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Bangkapi, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・14 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">4.0 (325)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">LUV Hotel</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Standard Double Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・1 bed (Queen size)</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-unstyled d-lg-flex align-items-center m-0 d-lg-block d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
+                                                cancellation</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <p class="h3 m-0">TWD 2,460</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Chatuchack1.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Chatuchack, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・12 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">4.0 (204)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">WOW Life Hotel</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Standard Double Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・1 bed (Queen size)</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-unstyled d-flex align-items-center m-0 d-lg-block d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <del class="text-black-50">TWD 2,880</del>
+                                        <p class="h3 m-0">TWD <span class="text-primary">2,240</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/roomA.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Chatuchack, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・8 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">5.0 (189)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">Celebrity Palace</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Standard Double Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・1 bed (Queen size)</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-unstyled d-flex align-items-center m-0 d-lg-block d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <del class="text-black-50">TWD 2,120</del>
+                                        <p class="h3 m-0">TWD <span class="text-primary">1,890</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Watana1.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Watana, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・6 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">5.0 (102)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">Bangkok Hostel</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Twin Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・2 beds (2 twins)</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-unstyled d-lg-flex align-items-center m-0 d-lg-block d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
+                                                cancellation</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <p class="h3 m-0">TWD 880</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Chatuchack2.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Watana, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・6 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">4.0 (283)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">Watana First Hostel</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Deluxe Double Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・1 bed (Queen size)</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-unstyled d-lg-flex align-items-center m-0 d-lg-block d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
+                                                cancellation</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <p class="h3 m-0">TWD 2,090</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-2">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/DinDaeng1.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Din Daeng, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・7 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">4.0 (138)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">DD Space</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Deluxe Double Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・1 bed (Queen size)</p>
+                                        </li>
+                                    <lg-/ul>
+                                    <ul class="list-unstyled d-lg-flex align-items-center m-0 d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
+                                                cancellation</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <del class="text-black-50">TWD 1,700</del>
+                                        <p class="h3 m-0">TWD <span class="text-primary">1,240</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider d-lg-block d-none"></div>
+    
+                    <div class="card border-0 my-lg-4 mb-5">
+                        <div class="row no-gutters">
+                            <!-- 為什麼這個gutters沒有作用呢 -->
+                            <div class="col-4">
+                                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/DinDaeng2.jpg"
+                                    class="card-img" alt="card-photo">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body position-relative d-flex flex-column justify-content-center py-2 pr-sm-3 p-0">
+                                    <div class="card-score d-flex justify-content-between flex-lg-row flex-column">
+                                        <small class="text-primary d-flex">Rachada, Bangkok
+                                            <span class="text-black-50 d-lg-block d-none">・2 km from center</span>
+                                        </small>
+                                        <ul class="list-unstyled d-flex align-items-center m-0">
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <li class="mr-1"><i class="fas fa-star"></i></li>
+                                            <small class="text-black-50">3.0 (446)</small>
+                                        </ul>
+                                    </div>
+                                    <ul class="list-unstyled m-sm-0 m-1">
+                                        <li>
+                                            <h3 class="card-title">Dininn Hotel</h3>
+                                        </li>
+                                        <li>
+                                            <p class="card-text text-black-80 m-0">
+                                                Deluxe Twin Room</p>
+                                        </li>
+                                        <li>
+                                            <p class="card-text small text-black-50">
+                                                2 guests・2 beds (2 twins)</p>
+                                        </li>
+                                    <lg-/ul>
+                                    <ul class="list-unstyled d-lg-flex align-items-center m-0 d-none">
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
+                                                cancellation</span>
+                                        </li>
+                                        <li>
+                                            <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
+                                        </li>
+                                    </ul>
+                                    <div class="money-block text-right d-flex flex-column">
+                                        <small class="text-black-50 d-lg-block d-none">per night</small>
+                                        <p class="h3 m-0">TWD 3,480</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="card border-0 shadow my-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/Chatuchack2.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Watana, Bangkok
-                                        <span class="text-black-50">・6 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">4.0 (283)</small>
-                                    </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">Watana First Hostel</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Deluxe Double Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・1 bed (Queen size)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
-                                            cancellation</span>
-                                    </li>
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <p class="h3 m-0">TWD 2,090</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="card border-0 shadow my-4">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/DinDaeng1.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Din Daeng, Bangkok
-                                        <span class="text-black-50">・7 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">4.0 (138)</small>
-                                    </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">DD Space</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Deluxe Double Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・1 bed (Queen size)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0 d-none">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
-                                            cancellation</span>
-                                    </li>
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <del class="text-black-50">TWD 1,700</del>
-                                    <p class="h3 m-0">TWD <span class="text-primary">1,240</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="dropdown-divider"></div>
-
-                <div class="card border-0 shadow my-4 mb-5">
-                    <div class="row no-gutters">
-                        <!-- 為什麼這個gutters沒有作用呢 -->
-                        <div class="col-md-4">
-                            <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week8/DinDaeng2.jpg"
-                                class="card-img rounded-0 rounded-left" alt="card-photo">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body position-relative d-flex flex-column justify-content-center pr-3">
-                                <div class="card-score d-flex justify-content-between">
-                                    <small class="text-primary">Rachada, Bangkok
-                                        <span class="text-black-50">・2 km from center</span>
-                                    </small>
-                                    <ul class="list-unstyled d-flex align-items-center m-0">
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <li class="mr-1"><i class="fas fa-star"></i></li>
-                                        <small class="text-black-50">3.0 (446)</small>
-                                    </ul>
-                                </div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h3 class="card-title">Dininn Hotel</h3>
-                                    </li>
-                                    <li>
-                                        <p class="card-text text-black-80 m-0">
-                                            Deluxe Twin Room</p>
-                                    </li>
-                                    <li>
-                                        <p class="card-text small text-black-50">
-                                            2 guests・2 beds (2 twins)</p>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex align-items-center m-0 d-none">
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50 mr-3">Free
-                                            cancellation</span>
-                                    </li>
-                                    <li>
-                                        <span class="badge badge-pill badge-primary text-black-50">No prepayment</span>
-                                    </li>
-                                </ul>
-                                <div class="money-block position-absolute text-right d-flex flex-column">
-                                    <small class="text-black-50">per night</small>
-                                    <p class="h3 m-0">TWD 3,480</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                
                 <div class="d-flex align-items-center justify-content-between bg-secondary p-3 rounded mb-5">
                     <button class="btn btn-outline-primary mr-auto">PREVIOUS</button>
                     <ul class="list-unstyled d-flex m-0">
@@ -622,8 +790,6 @@
                     </ul>
                     <button class="btn btn-primary ml-auto">NEXT</button>
                 </div>
-
-
             </div>
         </div>
     </div>
@@ -683,7 +849,7 @@
     </footer>
 
     <div class="container d-flex flex-md-row flex-column-reverse align-items-center p-3">
-        <small class="text-black-50 mr-lg-5 mr-md-auto">
+        <small class="text-black-50 mr-lg-5 mr-md-auto d-sm-block d-none">
             © 2020 ALOHA, Inc. All rights reserved.</small>
 
         <ul class="list-unstyled d-flex m-0 mb-sm-0 mb-2">

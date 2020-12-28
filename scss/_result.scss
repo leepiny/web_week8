@@ -4,12 +4,17 @@
     }
 }
 @mixin mobile {
-    @media (max-width: 576px) {
+    @media (max-width: 670px) {
         @content;
     }    
 }
 *,*::before,*::after{
-    // outline: 1px solid green;
+    outline: 1px solid green;
+}
+.container{
+    @include pad{
+        max-width: 880px;
+    }
 }
 img{
     display: block;
@@ -21,6 +26,9 @@ a{
     color: black;
     display:block;
     cursor: pointer;
+}
+.font-s{
+    font-size: 12px;
 }
 .mb-xl{
     margin-bottom: 72px;
@@ -87,27 +95,65 @@ a{
 //漢堡選單 Animation
 header .dropdown{
     width: 28%;
+    @include mobile{
+        width: 33%;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+    .dropdown-text{
+        @include mobile{
+            margin: 0 auto;
+        }
+    }
     .dropdown-menu{
         width: 100%;
     }
     button{
         width: 100%;
+        @include mobile{
+            background: transparent;
+            border: none;
+        }
+    }
+}
+.mobile-bg-secondary{
+    @include mobile{
+        background: #F1F0F8;
     }
 }
 .card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 20px 24px;
+    @include mobile{
+        box-shadow: none;
+        border-radius: 0;
+    }
     .card-body{
         height: 100%;
     }
     img{
         max-height: 175px;
+        height: 100%;
         object-fit: cover;
+        border-radius: 0;
+        border-radius:10px 0 0 10px;
+        @include mobile{
+            min-height: 180px;
+            border-radius: 0;
+        }
     }
 }
 .money-block{
+    position:absolute;
     bottom: 12px;
     right: 16px;
+    @include mobile{
+        position:static;
+        font-size: 16px;
+        del{
+            font-size: 1px;
+        }
+    }
 }
-
 
 
 footer{
