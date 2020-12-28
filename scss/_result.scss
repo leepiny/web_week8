@@ -9,7 +9,7 @@
     }    
 }
 *,*::before,*::after{
-    outline: 1px solid green;
+    // outline: 1px solid green;
 }
 .container{
     @include pad{
