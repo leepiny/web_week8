@@ -121,27 +121,30 @@ header .dropdown{
         background: #F1F0F8;
     }
 }
-.card{
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 20px 24px;
-    @include mobile{
-        box-shadow: none;
-        border-radius: 0;
-    }
-    .card-body{
-        height: 100%;
-    }
-    img{
-        max-height: 175px;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 0;
-        border-radius:10px 0 0 10px;
+.room-card{
+    .card{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 20px 24px;
         @include mobile{
-            min-height: 180px;
+            box-shadow: none;
             border-radius: 0;
+        }
+        .card-body{
+            height: 100%;
+        }
+        img{
+            max-height: 175px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            border-radius:10px 0 0 10px;
+            @include mobile{
+                min-height: 180px;
+                border-radius: 0;
+            }
         }
     }
 }
+
 .money-block{
     position:absolute;
     bottom: 12px;
@@ -154,7 +157,6 @@ header .dropdown{
         }
     }
 }
-
 
 footer{
     .footer-title{
